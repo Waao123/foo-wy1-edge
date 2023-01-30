@@ -2,10 +2,12 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     password: sanrui@2020
-    url: jdbc:mysql://172.16.11.179:3306/intel_eg?useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:mysql://172.16.11.179:3306/intel_eg
     username: infuser
   redis:
     database: 6
     host: 172.16.11.179
     port: 30379
-
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
