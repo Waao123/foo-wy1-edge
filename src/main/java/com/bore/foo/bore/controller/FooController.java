@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author huawei
+ */
 @RestController
 @RequestMapping("/users")
 public class FooController {
@@ -20,21 +23,18 @@ public class FooController {
     }
 
     @GetMapping("/getAll")
-    public List<ResultVO> GetAll(){
-        List<ResultVO> list = userService.GetAll();
-        return list;
+    public List<ResultVO> getAll(){
+        return userService.getAll();
     }
 
     @PostMapping
     public Integer save(@RequestBody ResultVO resultVO){
-        Integer res = userService.save(resultVO);
-        return res;
+        return userService.save(resultVO);
     }
 
     @GetMapping("/ageCount")
     public String ageCount(){
-        String s = userService.ageCount();
-        return s;
+        return userService.ageCount();
     }
 
     /*@GetMapping("/test")
